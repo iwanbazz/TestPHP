@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// TCPDF
+Route::group(['prefix' => 'pdf'], function () {
+    Route::get('/generate', 'PdfController@generate');
+});
