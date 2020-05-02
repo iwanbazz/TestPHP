@@ -13,13 +13,13 @@ class OrderController extends Controller
     public function list()
     {
         $model = Order::all();
-        return view('order.list', compact('model'));    
+        return view('store.order.list', compact('model'));
     }
 
     public function show($id)
     {
         $model = Order::find($id);
-        return view('order.show', [
+        return view('store.order.show', [
             'model' => $model
         ]);
     }
@@ -31,11 +31,11 @@ class OrderController extends Controller
             $request->validate([
                 'code' => ['required','string','min:6', new CheckVoucher()]
             ]);
-    
+
             $voucher = Discount::where('discount_code', $request->code)->first();
             $discount = floor($order->total_price * $voucher->discount_percentage / 100);
             $totalPayment = $order->total_payment - $discount;
-    
+
             $data = [
                 'voucher_code' => strtoupper($request->code),
                 'discount' => $discount,

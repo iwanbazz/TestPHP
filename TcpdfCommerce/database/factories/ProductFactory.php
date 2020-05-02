@@ -10,7 +10,7 @@ $factory->define(Product::class, function (Faker $faker) {
     \Bezhanov\Faker\ProviderCollectionHelper::addAllProvidersTo($faker);
     return [
         'name' => $faker->productName,
-        'image' => $faker->avatar,
+        'image' => $faker->placeholder,
         'price' => rand(100000, 1000000)
     ];
 });

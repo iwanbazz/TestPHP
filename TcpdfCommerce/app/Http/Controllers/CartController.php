@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
+use App\Cart;
 
 class CartController extends Controller
 {
@@ -12,7 +14,7 @@ class CartController extends Controller
 
         $total = Cart::totalPrice();
 
-        return view('cart.cart', [
+        return view('store.cart.cart', [
             'model' => $model,
             'total' => $total
         ]);

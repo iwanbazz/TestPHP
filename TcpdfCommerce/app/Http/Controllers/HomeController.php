@@ -11,6 +11,6 @@ class HomeController extends Controller
     {
         $model = Product::paginate(12);
 
-        return view('welcome', ['model' => $model]);
+        return view('store.home', ['model' => $model]);
     }
 }
