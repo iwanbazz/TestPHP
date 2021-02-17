@@ -1,6 +1,4 @@
 # Technical Test PHP
-This repository is part of a test for joining a company applied on Glints.
-For solution 1.Problem Solving and 3.Laravel can be viewed in <link>https://tcpdf-commerce.herokuapp.com</link>
 
 1. Problem Solving
    - Run <code>php ./ProblemSolving/StringReducer.php</code> from Bash.
